@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ecopetrolLogo from "./assets/Ecopetrol_Logo.png"
+import myPrettyFace from "./assets/Headshot.png"
 
 import {
   FlexBox,
@@ -32,7 +34,7 @@ const theme = {
   fonts: {
     header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
     text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
-  }
+  },
 };
 // SPECTACLE_CLI_THEME_END
 
@@ -75,28 +77,77 @@ const Presentation = () => (
   <Deck theme={theme} template={template}>
     <Slide>
       <FlexBox height="100%">
-        <SpectacleLogo size={500} />
+        <Image src={ecopetrolLogo} width={900} alt="logo" />
       </FlexBox>
-      <Notes>
-        Spectacle supports notes per slide.
-        <ol>
-          <li>Notes can now be HTML markup!</li>
-          <li>Lists can make it easier to make points.</li>
-        </ol>
-      </Notes>
     </Slide>
-    <Slide>
+    <Slide backgroundColor="black">
       <FlexBox height="100%" flexDirection="column">
-        <Heading margin="0px" fontSize="150px">
-          ✨<i>Spectacle</i> ✨
+        <Image src={myPrettyFace} width={300} />
+        <Heading margin="0px" fontSize="130px">
+          Tatiana Dávila Albis
         </Heading>
         <Heading margin="0px" fontSize="h2">
-          A ReactJS Presentation Library
+          Ingeniera de Sistemas
         </Heading>
         <Heading margin="0px 32px" color="primary" fontSize="h3">
-          Where you can write your decks in JSX, Markdown, or MDX!
+          Experiencia en desarrollo web y desarrollo móvil
         </Heading>
       </FlexBox>
+    </Slide>
+    <Slide>
+      <Heading>Información Personal</Heading>
+        <Appear elementNum={0} transitionEffect={{to: {opacity: 1}, from: {opacity: 0}}}>
+          <ListItem>
+            <CodeSpan>
+              Me adapto fácil a los cambios, y amo los retos.
+            </CodeSpan>
+            </ListItem>
+        </Appear>
+        <Appear elementNum={1}>
+          <ListItem>
+            <CodeSpan>
+            Suelo ponerme metas a corto y mediano plazo.
+            </CodeSpan>
+          </ListItem>
+        </Appear>
+        <Appear elementNum={2}>
+          <ListItem>
+            <CodeSpan>
+              Soy responsable, resiliente, aprendo fácilmente.
+            </CodeSpan>
+          </ListItem>
+        </Appear>
+        <Appear elementNum={3}>
+        <ListItem>
+          <CodeSpan>
+            Me gusta ayudar y sentirme útil.
+          </CodeSpan>
+        </ListItem>
+        </Appear>
+    </Slide>
+    <Slide>
+      <Heading>Información Académica Profesional</Heading>
+        <Appear elementNum={0} >
+          <ListItem>
+            <CodeSpan>
+              Obtuve el título de Ingeniera de Sistemas en Diciembre del 2020
+            </CodeSpan>
+            </ListItem>
+        </Appear>
+        <Appear elementNum={1}>
+          <ListItem>
+            <CodeSpan>
+              He realizado cursos online de desarrollo web en plataformas como Udemy.
+            </CodeSpan>
+          </ListItem>
+        </Appear>
+        <Appear elementNum={2}>
+          <ListItem>
+            <CodeSpan>
+              Realicé un curso de seguridad informática.
+            </CodeSpan>
+          </ListItem>
+        </Appear>
     </Slide>
     <Slide
       backgroundColor="tertiary"
@@ -125,23 +176,7 @@ const Presentation = () => (
         </ListItem>
       </UnorderedList>
     </Slide>
-    <Slide>
-      <Heading>Animated Elements</Heading>
-      <OrderedList>
-        <Appear>
-          <ListItem>Elements can animate in!</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Out of order</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>
-            Just identify the order with the prop <CodeSpan>stepIndex</CodeSpan>
-            !
-          </ListItem>
-        </Appear>
-      </OrderedList>
-    </Slide>
+   
     <Slide>
       <FlexBox>
         <Text>These</Text>
