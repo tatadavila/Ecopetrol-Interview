@@ -54,8 +54,9 @@ module.exports = {
   // Default for boilerplate generation.
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Spectacle presentation',
-      template: './src/index.html'
+      title: 'Tat. Developer',
+      template: './src/index.html',
+      favicon: "./src/assets/favicon.ico",
     })
   ]
 };
