@@ -76,7 +76,7 @@ const Presentation = () => (
     </Slide> */}
     <Slide backgroundColor="#B5B0B2">
       <FlexBox height="100%" flexDirection="column">
-        <Image src={myPrettyFace} width={300} />
+        <Image loading="lazy" src={myPrettyFace} width={300} />
         <Heading margin="0px" fontSize="8rem" color="#516952">
           Tatiana Dávila Albis
         </Heading>
